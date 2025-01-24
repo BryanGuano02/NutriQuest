@@ -63,6 +63,38 @@ h2 {
     margin: 0;
 }
 
+#food-image{
+    width: 30%;
+    height: 25rem;
+    border-radius: 0.5rem;
+}
+
+#feedback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+#feedback.correct {
+    background-color: #4caf50;
+    content: "✔";
+}
+
+#feedback.incorrect {
+    background-color: #f44336;
+    content: "✖";
+}
+
+.hidden {
+    display: none;
+}
+
 #eleccion {
     padding: 20px;
     display: flex;
@@ -81,4 +113,29 @@ h2 {
 
 p {
     font-size: var(--font-general-size);
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+    /* align-items: center; */
+}
+
+.icono {
+    background-color: unset;
+}
+
+.icono-google {
+    width: 10px;
+    height: 10px;
+}
+
+i {
+    font-weight: 900;
+    stroke-width: 2rem;
 }
