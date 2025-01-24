@@ -1,0 +1,77 @@
+:root {
+    --color-primary: #FFD449;
+    --color-neutro: #909090;
+    --font-general-size: 3rem;
+    --color-black: #282c34;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    border: none;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+header, footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#siguiente {
+    background-color: unset;
+    color: var(--color-neutro);
+    font-size: var(--font-general-size);
+}
+
+time, #pista {
+    background-color: unset;
+    font-size: var(--font-general-size);
+    align-self: center;
+}
+
+.content {
+    text-align: center;
+    margin: auto 10rem;
+}
+
+.content-top {
+    background-color: var(--color-primary);
+    border-radius: 0.5rem;
+}
+
+h2 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+#eleccion{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-eleccion {
+    background-color: var(--color-neutro);
+    color: #fff;
+    font-size: var(--font-general-size);
+    padding: 3.5rem 12rem;
+    border: 0.01px solid var(--color-black);
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+
+p {
+    font-size: var(--font-general-size);
+}
