@@ -3,6 +3,8 @@
     --color-neutro: #909090;
     --font-general-size: 3rem;
     --color-black: #282c34;
+    --font-family: "Architects Daughter", serif;
+
 }
 
 html {
@@ -15,15 +17,18 @@ html {
 *:after {
     box-sizing: inherit;
     border: none;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
-    font-family: var(--fuenteParrafos);
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 2;
 }
 
-header, footer {
+header,
+footer {
     padding: 2rem;
     display: flex;
     justify-content: space-between;
@@ -36,7 +41,8 @@ header, footer {
     font-size: var(--font-general-size);
 }
 
-time, #pista {
+time,
+#pista {
     background-color: unset;
     font-size: var(--font-general-size);
     align-self: center;
@@ -57,11 +63,12 @@ h2 {
     margin: 0;
 }
 
-#eleccion{
+#eleccion {
     padding: 20px;
     display: flex;
     justify-content: space-between;
 }
+
 .btn-eleccion {
     background-color: var(--color-neutro);
     color: #fff;
