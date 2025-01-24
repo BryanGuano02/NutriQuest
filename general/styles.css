@@ -1,0 +1,68 @@
+:root {
+    --primary-color: #FFD449;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    border: none;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--font-family);
+    background-image: url('path_to_image.jpg');
+    /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 100px;
+    margin: 0 0 25px 0;
+}
+
+button {
+    display: block;
+    width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    font-size: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF8C00;
+}
