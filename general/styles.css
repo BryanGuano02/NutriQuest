@@ -1,5 +1,6 @@
 :root {
     --primary-color: #FFD449;
+    --font-family: "Architects Daughter", serif;
 }
 
 html {
@@ -29,7 +30,6 @@ body {
     line-height: 2;
     font-family: var(--font-family);
     background-image: url('path_to_image.jpg');
-    /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -37,12 +37,12 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 h1 {
     font-size: 12rem;
     margin: 0;
+    text-align: center;
 }
 
 button {
@@ -55,7 +55,7 @@ button {
     background-color: var(--primary-color);
     color: black;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 button:hover {
