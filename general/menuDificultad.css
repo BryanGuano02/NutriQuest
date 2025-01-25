@@ -1,3 +1,18 @@
+:root {
+    --primary-color: #FFD449;
+}
+
 h1 {
     font-size: 8rem;
+}
+
+header {
+    background-color: var(--primary-color);
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.btn-regresar{
+    background: unset;
 }
