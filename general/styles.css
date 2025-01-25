@@ -45,7 +45,7 @@ h1 {
     text-align: center;
 }
 
-button {
+.boton {
     display: block;
     width: 80rem;
     margin: 1.5rem;
@@ -58,7 +58,7 @@ button {
     transition: background-color 0.5s ease;
 }
 
-button:hover {
+.boton:hover {
     background-color: #FF8C00;
 }
 
