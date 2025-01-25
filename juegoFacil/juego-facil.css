@@ -56,11 +56,16 @@ time,
 .content-top {
     background-color: var(--color-primary);
     border-radius: 0.5rem;
+    height: 38.7rem;
 }
 
 h2 {
     font-size: 5rem;
     margin: 0;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
 }
 
 #food-image{
@@ -71,13 +76,13 @@ h2 {
 
 #feedback {
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 48px;
+    font-size: 4rem;
     font-weight: bold;
     color: #fff;
-    padding: 20px;
+    padding: 4.2rem;
     border-radius: 50%;
 }
 
@@ -103,7 +108,7 @@ h2 {
     background-color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     max-width: 500px;
     text-align: center;
 }
@@ -121,9 +126,6 @@ h2 {
     cursor: pointer;
 }
 
-
-
-
 #eleccion {
     padding: 20px;
     display: flex;
@@ -135,7 +137,7 @@ h2 {
     color: #fff;
     font-size: var(--font-general-size);
     padding: 3.5rem 12rem;
-    border: 0.01px solid var(--color-black);
+    border: 0.01rem solid var(--color-black);
     cursor: pointer;
     /* transition: background-color 0.3s ease; */
 }
@@ -159,10 +161,10 @@ footer div {
     background-color: unset;
 }
 
-.icono-google {
+/* .icono-google {
     width: 10px;
     height: 10px;
-}
+} */
 
 i {
     font-weight: 900;
