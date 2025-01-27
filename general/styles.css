@@ -24,8 +24,7 @@ a {
     color: inherit;
     display: block;
     width: 100%;
-text-align: center;
-    /* padding: 1rem; */
+    text-align: center;
 }
 
 body {
@@ -52,7 +51,7 @@ h1 {
 .boton {
     display: block;
     width: 80rem;
-    margin: 1.5rem;
+    margin: 1.4rem;
     font-size: var(--font-size-large);
     border: none;
     border-radius: 0.5rem;
@@ -62,7 +61,8 @@ h1 {
     transition: background-color 0.5s ease;
 }
 
-.boton:hover, .boton:focus {
+.boton:hover,
+.boton:focus {
     background-color: #FF8C00;
     outline: unset;
 }
