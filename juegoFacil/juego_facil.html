@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=volume_up" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=volume_up" />
-    <title>Juego Saludable</title>
+    <title>Juego Nivel Fácil</title>
 </head>
 
 <body>
@@ -27,21 +27,22 @@
     </header>
     <div class="content">
         <div class="content-top">
-            <h2 id="food-name">Ensalada</h2>
+            <h2 tabindex="0" id="food-name">Ensalada</h2>
             <div class="image-container" id="feedback-container">
                 <img id="food-image" src="img/brocoli.jpg" alt="Brocoli">
                 <div id="feedback" class="hidden"></div>
             </div>
         </div>
         <div id="eleccion">
-            <button id="healthy" class="btn-eleccion">Saludable</button>
+            <button id="healthy" class="btn-eleccion" tabindex="0">Saludable</button>
             <button id="unhealthy" class="btn-eleccion">No saludable</button>
         </div>
-        <p>Puntuación: <span id="score">0</span></p>
+        <p tabindex="0">Puntuación: <span id="score">0</span></p>
     </div>
 
     <!-- Recuadro informativo -->
     <div id="info-box" class="hidden">
+        <!-- <div id="info-box"> -->
         <div class="info-content">
             <h3>Recordemos...</h3>
             <p id="info-text"></p>
@@ -50,17 +51,14 @@
     </div>
 
     <footer>
-        <button class="icono">
+        <a class="icono" role="button" href="">
             <i class="fa-solid fa-circle-question fa-2x" aria-label="Pistas del juego"></i>
-        </button>
+        </a>
 
         <div>
-            <button class="icono">
-                <a href="../general/html/menuPausa.html">
-
-                    <i class="fa-solid fa-circle-pause fa-2x" aria-label="Pausar juego"></i>
-                </a>
-            </button>
+            <a class="icono" role="button" href="../general/html/menuPausa.html">
+                <i class="fa-solid fa-circle-pause fa-2x" aria-label="Pausar juego"></i>
+            </a>
         </div>
     </footer>
     <script src="juego_facil.js"></script>

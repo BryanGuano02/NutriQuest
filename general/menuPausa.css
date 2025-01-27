@@ -3,7 +3,7 @@
     --color-neutral: #909090;
     --font-size-large: 4rem;
     --font-size-medium: 2.5rem;
-    --color-black: #282c34;
+    --color-black: #000;
     --font-family: "Architects Daughter", serif;
     --color-bg-pause: #e6e4e2;
 }
@@ -40,7 +40,7 @@ body {
 
 main {
     background-color: var(--color-bg-pause);
-    width: 55rem;
+    width: 50%;
     border-radius: 0.5rem;
     padding: 2rem 2rem 1rem 2rem;
 }
@@ -56,6 +56,11 @@ h1 {
     font-size: var(--font-size-large);
     margin: 0 0 0 1rem;
 }
+h1:focus {
+    color: var(--color-black);
+    text-shadow: 0 0.5rem 1rem var(--color-black);
+    outline: none;
+}
 
 a {
     text-decoration: none;
@@ -64,9 +69,14 @@ a {
     font-size: var(--font-size-medium);
 }
 
-button {
-    width: 40rem;
-    margin: 2.5rem auto;
-    display: block;
-    background-color: unset;
+.boton {
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+}
+
+.boton:hover,
+.boton:focus {
+    outline: unset;
+    background-color: #d4d4d4;
+
 }

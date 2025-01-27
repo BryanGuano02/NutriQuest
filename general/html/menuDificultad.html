@@ -16,20 +16,18 @@
 
 <body>
     <header>
-        <button class="btn-regresar">
 
-            <!-- TODO: Poner íconosrespectivo  -->
-            <a href="../../index.html" class="regresar-menú">Menú principal</a>
-        </button>
+        <!-- TODO: Poner íconosrespectivo  -->
+        <a class="btn-regresar" href="../../index.html" class="regresar-menú" aria-label="Regresar al menú principal"
+            tabindex="1">Menú principal</a>
+
     </header>
     <main>
-        <h1>ELEGIR DIFICULTAD</h1>
+        <h1 tabindex="2">ELEGIR DIFICULTAD</h1>
         <div class="botones">
-            <button class="boton">
-                <a href="../../juegoFacil/juego_facil.html">FÁCIL</a>
-            </button>
-            <button class="boton">MEDIO</button>
-            <button class="boton">DIFÍCIL</button>
+            <a tabindex="2" class="boton" role="button" href="../../juegoFacil/juego_facil.html">FÁCIL</a>
+            <a tabindex="3"href="" role="button" class="boton">MEDIO</a>
+            <a tabindex="4"href="" role="button" class="boton">DIFÍCIL</a>
         </div>
     </main>
 </body>

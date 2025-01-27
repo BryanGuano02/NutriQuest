@@ -1,6 +1,9 @@
 :root {
-    --primary-color: #FFD449;
+    --color-primary: #FFD449;
+    --color-black: #000;
     --font-family: "Architects Daughter", serif;
+    --font-size-xlarge: 12rem;
+    --font-size-large: 4rem;
 }
 
 html {
@@ -22,7 +25,7 @@ a {
     color: inherit;
     display: block;
     width: 100%;
-    padding: 1rem;
+    text-align: center;
 }
 
 body {
@@ -41,26 +44,35 @@ body {
 }
 
 h1 {
-    font-size: 12rem;
+    font-size: var(--font-size-xlarge);
     margin: 0;
     text-align: center;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-button {
+h1:focus {
+    color: var(--color-black);
+    text-shadow: 0 0.5rem 1rem var(--color-black);
+    outline: none;
+}
+
+.boton {
     display: block;
     width: 80rem;
-    margin: 1.5rem;
-    font-size: 4.5rem;
+    margin: 1.4rem;
+    font-size: var(--font-size-large);
     border: none;
     border-radius: 0.5rem;
-    background-color: var(--primary-color);
+    background-color: var(--color-primary);
     color: black;
     cursor: pointer;
     transition: background-color 0.5s ease;
 }
 
-button:hover {
+.boton:hover,
+.boton:focus {
     background-color: #FF8C00;
+    outline: unset;
 }
 
 .botones {
