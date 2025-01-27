@@ -1,12 +1,8 @@
 :root {
     --primary-color: #FFD449;
-    --font-size-large: 4rem;
+    --font-size-mlarge: 8rem;
     --font-size-medium: 2.5rem;
     --font-size-small: 2rem;
-}
-
-h1 {
-    font-size: 8rem;
 }
 
 header {
@@ -16,9 +12,18 @@ header {
     top: 0;
 }
 
-.btn-regresar{
+.btn-regresar {
     width: 17rem;
     font-size: var(--font-size-small);
-    padding: 0;
     margin: 0.5rem;
+    transition: background-color 0.5s ease;
+    border-radius: 0.5rem;
+}
+
+.btn-regresar:hover {
+    background-color: #FF8C00;
+}
+
+h1 {
+    font-size: var(--font-size-mlarge);
 }
