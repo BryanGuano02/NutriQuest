@@ -1,6 +1,6 @@
 :root {
     --color-primary: #FFD449;
-    --color-neutro: #5c5c5c;
+    --color-neutro: #767676;
     --color-black: #000;
     --font-general-size: 3rem;
     --font-family: "Architects Daughter", serif;
@@ -152,7 +152,7 @@ time,
 
 .btn-eleccion {
     background-color: var(--color-neutro);
-    color:   #fff;
+    color: #fff;
     font-size: var(--font-general-size);
     padding: 2rem 11rem;
     cursor: pointer;
@@ -160,7 +160,7 @@ time,
 
 .btn-eleccion:hover,
 .btn-eleccion:focus {
-    background-color:  #434343;
+    background-color: #434343;
     outline: unset;
 }
 
