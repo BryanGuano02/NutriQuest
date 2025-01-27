@@ -20,7 +20,8 @@ header {
     border-radius: 0.5rem;
 }
 
-.btn-regresar:hover {
+.btn-regresar:hover, .btn-regresar:focus {
+    outline: unset;
     background-color: #FF8C00;
 }
 
