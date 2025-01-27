@@ -1,7 +1,7 @@
 :root {
     --color-primary: #FFD449;
-    --color-neutro: #909090;
-    --color-black: #fff;
+    --color-neutro: #5c5c5c;
+    --color-black: #000;
     --font-general-size: 3rem;
     --font-family: "Architects Daughter", serif;
 }
@@ -24,6 +24,10 @@ body {
     font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 2;
+    background-image: url('../general/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 header,
@@ -148,28 +152,27 @@ time,
 
 .btn-eleccion {
     background-color: var(--color-neutro);
-    color: #fff;
+    color:   #fff;
     font-size: var(--font-general-size);
     padding: 2rem 11rem;
     cursor: pointer;
-    /* transition: background-color 0.3s ease; */
 }
 
 .btn-eleccion:hover,
 .btn-eleccion:focus {
-    background-color: #4d4c4c;
+    background-color:  #434343;
     outline: unset;
 }
 
 p {
     font-size: var(--font-general-size);
-    margin: 0;
+    margin: 0.8rem 0;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 p:focus {
     color: var(--color-black);
-    text-shadow: 0 0.5rem 1rem var(--color-black);
+    text-shadow: 0 0 10px var(--color-black);
     outline: none;
 }
 
