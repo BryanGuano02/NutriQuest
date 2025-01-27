@@ -1,11 +1,11 @@
 :root {
+    --font-favmily: "Architects Daughter", serif;
     --color-primary: #FFD449;
     --color-neutral: #909090;
+    --color-bg-pause: #e6e4e2;
+    --color-black: #000;
     --font-size-large: 4rem;
     --font-size-medium: 2.5rem;
-    --color-black: #000;
-    --font-family: "Architects Daughter", serif;
-    --color-bg-pause: #e6e4e2;
 }
 
 html {
