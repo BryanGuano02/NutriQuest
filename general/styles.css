@@ -1,6 +1,8 @@
 :root {
     --primary-color: #FFD449;
     --font-family: "Architects Daughter", serif;
+    --font-size-xlarge: 12rem;
+    --font-size-large: 4rem;
 }
 
 html {
@@ -22,7 +24,8 @@ a {
     color: inherit;
     display: block;
     width: 100%;
-    padding: 1rem;
+text-align: center;
+    /* padding: 1rem; */
 }
 
 body {
@@ -41,16 +44,16 @@ body {
 }
 
 h1 {
-    font-size: 12rem;
+    font-size: var(--font-size-xlarge);
     margin: 0;
     text-align: center;
 }
 
-button {
+.boton {
     display: block;
     width: 80rem;
     margin: 1.5rem;
-    font-size: 4.5rem;
+    font-size: var(--font-size-large);
     border: none;
     border-radius: 0.5rem;
     background-color: var(--primary-color);
@@ -59,7 +62,7 @@ button {
     transition: background-color 0.5s ease;
 }
 
-button:hover {
+.boton:hover {
     background-color: #FF8C00;
 }
 
