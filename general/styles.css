@@ -62,8 +62,9 @@ h1 {
     transition: background-color 0.5s ease;
 }
 
-.boton:hover {
+.boton:hover, .boton:focus {
     background-color: #FF8C00;
+    outline: unset;
 }
 
 .botones {
