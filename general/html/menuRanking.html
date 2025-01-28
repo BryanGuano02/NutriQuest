@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../menuDificultad.css">
     <title>Ranking</title>
 </head>
+
 <body>
 
+    <header>
+        <!-- TODO: Poner íconosrespectivo  -->
+        <a class="btn-regresar" href="../../index.html" class="regresar-menú" aria-label="Regresar al menú principal"
+            tabindex="1">Menú principal</a>
+    </header>
+    <main>
+        <h1 tabindex="2">ELEGIR DIFICULTAD</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Puntuación</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-body">
+                <tr>
+                    <td>${jugador.nombre}</td>
+                    <td>${jugador.nombre}</td>
+                    <td>${jugador.nombre}</td>
+                </tr>
+                <tr>
+                    <td>${jugador.nombre}</td>
+                    <td>${jugador.nombre}</td>
+                    <td>${jugador.nombre}</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
+
 </html>
