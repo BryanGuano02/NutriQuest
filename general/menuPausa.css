@@ -41,7 +41,7 @@ body {
 main {
     background-color: var(--color-bg-pause);
     width: 50%;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     padding: 2rem 2rem 1rem 2rem;
 }
 
@@ -71,7 +71,7 @@ a {
 
 .boton {
     margin: 2rem 0;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
 }
 
 .boton:hover,

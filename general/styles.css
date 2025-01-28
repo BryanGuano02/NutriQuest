@@ -63,7 +63,7 @@ h1:focus {
     margin: 1.4rem;
     font-size: var(--font-size-large);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     background-color: var(--color-primary);
     color: black;
     cursor: pointer;
