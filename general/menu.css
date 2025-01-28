@@ -1,0 +1,59 @@
+:root {
+    --color-primary: #FFD449;
+    --color-highlight: #ffecb9;
+    --font-size-mlarge: 8rem;
+    --font-size-medium: 2.5rem;
+    --font-size-small: 2rem;
+}
+
+header {
+    background-color: var(--color-primary);
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.btn-regresar {
+    width: 17rem;
+    font-size: var(--font-size-small);
+    margin: 0.4rem;
+    transition: background-color 0.5s ease;
+    border-radius: 0.5rem;
+}
+
+.btn-regresar:hover,
+.btn-regresar:focus {
+    outline: unset;
+    background-color: #FF8C00;
+}
+
+h1 {
+    font-size: var(--font-size-mlarge);
+    border-radius: 0.5rem;
+}
+
+/* == MENU RANKING == */
+table {
+    background-color: #fff;
+    padding: 2rem;
+    width: 100%;
+    font-size: var(--font-size-medium);
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+table th {
+    background-color: var(--color-primary);
+    padding: 10px;
+    border-bottom: 0.1rem solid #ddd;
+}
+
+table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 0.1rem solid #ddd;
+}
+
+tr:hover {
+    background-color: var(--color-highlight);
+}
