@@ -58,7 +58,7 @@ time,
 .content-top {
     background-color: var(--color-primary);
     border-radius: 0.5rem;
-    height: 35.7rem;
+    height: 36.7rem;
 }
 
 #food-name {
@@ -81,7 +81,7 @@ time,
 
 #food-image {
     width: 30%;
-    height: 24rem;
+    height: 22rem;
     border-radius: 0.5rem;
 }
 
@@ -145,7 +145,7 @@ time,
 }
 
 #eleccion {
-    padding: 1rem;
+    padding: 3rem;
     display: flex;
     justify-content: space-between;
 }
