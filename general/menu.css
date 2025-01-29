@@ -86,3 +86,11 @@ ol {
     margin: 0;
     padding: 0 0 0 3rem;
 }
+
+.btn-animacion {
+    transition: transform 0.3s ease;
+}
+
+.btn-animacion:hover, .btn-animacion:focus {
+    transform: scale(1.03);
+}

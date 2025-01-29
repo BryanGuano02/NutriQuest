@@ -125,11 +125,12 @@ a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
 }
-.btn-animacion{
+
+.btn-animacion {
     transition: transform 0.3s ease;
 }
 
-.btn-animacion:hover {
+.btn-animacion:hover, .btn-animacion:focus {
     transform: scale(1.03);
 }
 
@@ -138,7 +139,7 @@ a {
     outline-offset: 2px;
 }
 
-.resaltar:focus{
+.resaltar:focus {
     color: var(--color-black);
     text-shadow: 0 0.5rem 1rem var(--color-black);
     outline: none;

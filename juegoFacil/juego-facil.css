@@ -57,7 +57,7 @@ time,
 
 .content-top {
     background-color: var(--color-primary);
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     height: 36.7rem;
 }
 
@@ -82,7 +82,7 @@ time,
 #food-image {
     width: 30%;
     height: 22rem;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
 }
 
 #feedback {
@@ -119,7 +119,7 @@ time,
     background-color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     max-width: 500px;
     text-align: center;
 }
@@ -137,7 +137,7 @@ time,
     cursor: pointer;
     width: 17rem;
     transition: background-color 0.5s ease;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
 }
 
 #next-item:hover {
@@ -156,6 +156,15 @@ time,
     font-size: var(--font-general-size);
     padding: 2rem 11rem;
     cursor: pointer;
+    border-radius: 1.5rem;
+}
+
+.btn-animacion {
+    transition: transform 0.3s ease;
+}
+
+.btn-animacion:hover, .btn-animacion:focus {
+    transform: scale(1.03);
 }
 
 .btn-eleccion:hover,
@@ -194,12 +203,14 @@ a {
     color: inherit;
     text-decoration: none;
     outline: unset;
+    transition: transform 0.3s ease;
 }
 
 i:before {
     font-weight: unset;
 }
 
-a.icono:focus i {
+a.icono:focus i, a.icono:hover i {
     font-weight: unset;
+    transform: scale(1.03);
 }

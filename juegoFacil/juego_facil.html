@@ -4,16 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="juego-facil.css">
     <link rel="stylesheet" href="../general/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="juego-facil.css">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1062a20a38.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=volume_up" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=volume_up" />
     <title>Juego Nivel Fácil</title>
 </head>
 
@@ -34,8 +28,8 @@
             </div>
         </div>
         <div id="eleccion">
-            <button id="healthy" class="btn-eleccion" tabindex="0">Saludable</button>
-            <button id="unhealthy" class="btn-eleccion">No saludable</button>
+            <button id="healthy" class="btn-eleccion btn-animacion" tabindex="0">Saludable</button>
+            <button id="unhealthy" class="btn-eleccion btn-animacion">No saludable</button>
         </div>
         <p tabindex="0">Puntuación: <span id="score">0</span></p>
     </div>
@@ -51,12 +45,14 @@
     </div>
 
     <footer>
-        <a class="icono" role="button" aria-label="Pistas del juego" href="#">
+        <a class="icono btn-animacion" role="button" aria-label="Instrucciones del juego"
+            href="../general/html/menuInstrucciones.html">
             <i class="fa-solid fa-circle-question fa-2x" aria-hidden="true"></i>
         </a>
 
         <div>
-            <a class="icono" role="button" aria-label="Pausar juego" href="../general/html/menuPausa.html">
+            <a class="icono btn-animacion" role="button" aria-label="Pausar juego"
+                href="../general/html/menuPausa.html">
                 <i class="fa-solid fa-circle-pause fa-2x" aria-hidden="true"></i>
             </a>
         </div>
