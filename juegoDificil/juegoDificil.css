@@ -1,9 +1,10 @@
 :root {
+    --font-family: "Architects Daughter", serif;
     --color-primary: #FFD449;
     --color-neutro: #767676;
     --color-black: #000;
     --font-general-size: 3rem;
-    --font-family: "Architects Daughter", serif;
+    --font-size-small: 2rem;
 }
 
 html {
