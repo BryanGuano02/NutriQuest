@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego dificultad difícil</title>
+</head>
+
+<body>
+
+    <header>
+        <time id="timer">00:00</time>
+        <!-- <button id="siguiente">
+            <a href="https://www.ejemplo.com" style="text-decoration: none; color: inherit;">Ir a Ejemplo</a>
+        </button> -->
+    </header>
+
+
+
+
+    <main>
+        <div class="nombres-comida">
+            <p>Alimentos grasos</p>
+            <p>Alimentos proteicos</p>
+            <p>Alimentos reguladores</p>
+            <p>Frutas y vegetales</p>
+            <p>Alimentos con carbohidratos</p>
+            <p>Lacteos</p>
+        </div>
+        <div id="piramide">
+            <img src="img/piramideVacia.png" alt="Pirámide alimenticia" id="base">
+            <img src="frutas.png" alt="Frutas y verduras" class="frutas">
+            <img src="lacteos.png" alt="Lácteos" class="lacteos">
+            <img src="carnes.png" alt="Carnes" class="carnes">
+            <img src="dulces.png" alt="Dulces" class="dulces">
+        </div>
+
+    </main>
+
+
+
+
+    <p tabindex="0">Puntuación: <span id="score">0</span></p>
+    <footer>
+        <a class="icono btn-animacion" role="button" aria-label="Instrucciones del juego"
+            href="../general/html/menuInstrucciones.html">
+            <i class="fa-solid fa-circle-question fa-2x" aria-hidden="true"></i>
+        </a>
+        <div>
+            <a class="icono btn-animacion" role="button" aria-label="Pausar juego"
+                href="../general/html/menuPausa.html">
+                <i class="fa-solid fa-circle-pause fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="juego_medio.js"></script>
+</body>
+
+</html>

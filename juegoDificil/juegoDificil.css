@@ -1,0 +1,186 @@
+:root {
+    --color-primary: #FFD449;
+    --color-neutro: #767676;
+    --color-black: #000;
+    --font-general-size: 3rem;
+    --font-family: "Architects Daughter", serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* height: 100hv; */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    border: none;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: var(--font-family);
+    /* height: 100hv; */
+    font-size: 1.6rem;
+    line-height: 2;
+    background-image: url('../general/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* display: block; */
+    text-align: center;
+}
+
+header,
+footer {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#siguiente {
+    background-color: unset;
+    color: var(--color-neutro);
+    font-size: var(--font-general-size);
+}
+
+time,
+#pista {
+    background-color: unset;
+    font-size: var(--font-general-size);
+    align-self: center;
+}
+
+h2 {
+    font-size: 5rem;
+    margin: 0;
+    line-height: 1.76;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2:focus {
+    color: var(--color-black);
+    text-shadow: 0 0 10px var(--color-black);
+    outline: none;
+}
+
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(6, 12rem);
+    gap: 3rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.card {
+    width: 13rem;
+    height: 20rem;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: .5rem .5rem .45rem rgba(0, 0, 0, 0.4);
+    border: 0.1rem solid #000;
+}
+
+.btn-animacion {
+    transition: transform 0.3s ease;
+}
+
+.btn-animacion:hover,
+.btn-animacion:focus {
+    transform: scale(1.03);
+}
+
+p {
+    font-size: var(--font-general-size);
+    margin: 0.8rem 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+p:focus {
+    color: var(--color-black);
+    text-shadow: 0 0 10px var(--color-black);
+    outline: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+}
+
+.icono {
+    background-color: unset;
+    height: 3rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: unset;
+    transition: transform 0.3s ease;
+}
+
+i:before {
+    font-weight: unset;
+}
+
+a.icono:focus i,
+a.icono:hover i {
+    font-weight: unset;
+    transform: scale(1.03);
+}
+
+
+
+
+#piramide {
+    position: relative;
+    width: 500px;
+    /* Ajusta según el tamaño de tu imagen base */
+    margin: auto;
+}
+
+#base {
+    width: 100%;
+}
+
+.frutas {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    width: 60%;
+}
+
+.lacteos {
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    width: 40%;
+}
+
+.carnes {
+    position: absolute;
+    bottom: 50%;
+    left: 35%;
+    width: 30%;
+}
+
+.dulces {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    width: 20%;
+}
