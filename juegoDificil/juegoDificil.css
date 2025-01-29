@@ -43,6 +43,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
 /*
 #siguiente {
     background-color: unset;
@@ -76,29 +77,40 @@ main {
     justify-content: center;
 }
 
-.palabras {
+.palabras{
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+}
+
+#porciones {
+    margin: 0 7rem 0 12rem;
+}
+
+.nombres-comida {
+    font-size: var(--font-general-size);
 }
 
 .recuadros {
     display: flex;
     flex-direction: column;
     gap: 5.5rem;
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; */
+    margin: 2.5rem 2rem 0 0;
 }
 
 .recuadro {
-    width: 39rem;
+    width: 37rem;
     height: 5rem;
     background-color: var(--color-neutral-light);
     border-radius: 1.5rem;
 }
 
-.nombres-comida {
-    font-size: var(--font-general-size);
+#comida-input {
+    margin: 2.5rem 4rem 0 0;
 }
+
 
 #piramide {
     position: relative;
