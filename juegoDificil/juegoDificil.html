@@ -16,24 +16,35 @@
         </button> -->
     </header>
 
-
+    <h2>Pirámide Alimenticia</h2>
 
 
     <main>
-        <div class="nombres-comida">
-            <p>Alimentos grasos</p>
-            <p>Alimentos proteicos</p>
-            <p>Alimentos reguladores</p>
-            <p>Frutas y vegetales</p>
-            <p>Alimentos con carbohidratos</p>
-            <p>Lacteos</p>
+        <div class="nombres-comida palabras" id="palabras">
+            <div class="palabra" draggable="true" id="palabra1">Alimentos grasos</div>
+            <div class="palabra" draggable="true" id="palabra2">Alimentos proteicos</div>
+            <div class="palabra" draggable="true" id="palabra3">Alimentos reguladores</div>
+            <div class="palabra" draggable="true" id="palabra4">Frutas y vegetales</div>
+            <div class="palabra" draggable="true" id="palabra5">Alimentos con carbohidratos</div>
+            <div class="palabra" draggable="true" id="palabra6">Lacteos</div>
+            <p>sdf</p>
         </div>
         <div id="piramide">
-            <img src="img/piramideVacia.png" alt="Pirámide alimenticia" id="base">
-            <img src="frutas.png" alt="Frutas y verduras" class="frutas">
-            <img src="lacteos.png" alt="Lácteos" class="lacteos">
-            <img src="carnes.png" alt="Carnes" class="carnes">
-            <img src="dulces.png" alt="Dulces" class="dulces">
+            <div class="nivel" id="nivel-1">
+                <img src="img/grasos.png" alt="Caramelos y helados" class="dulces">
+            </div>
+            <div class="nivel" id="nivel-2">
+                <img src="img/proteicos.png" alt="Carne, pescado y enbutidos" class="carnes">
+            </div>
+            <div class="nivel" id="nivel-3">
+                <img src="img/lacteos.png" alt="Leche, queso y yogur" class="lacteos">
+            </div>
+            <div class="nivel" id="nivel-4">
+                <img src="img/frutas_verduras.png" alt="Frutas y verduras" class="frutas">
+            </div>
+            <div class="nivel" id="nivel-5">
+                <img src="img/carbohidratos.png" alt="Panes y cereales" class="carbohidratos">
+        </div>
         </div>
 
     </main>
