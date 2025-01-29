@@ -72,7 +72,7 @@ a {
 }
 
 .boton {
-    margin: 2rem 0;
+    margin: 1rem 0;
     border-radius: 1.5rem;
 }
 
@@ -89,4 +89,12 @@ a {
     outline: unset;
     background-color: var(--color-neutral-light);
     border-radius: 1.5rem;
+}
+
+.boton-instruccion {
+    margin: 0;
+}
+
+#titulo-instruccion{
+    height: 7rem;
 }
