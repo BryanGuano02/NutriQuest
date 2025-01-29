@@ -1,7 +1,8 @@
 :root {
-    --font-favmily: "Architects Daughter", serif;
+    --font-family: "Architects Daughter", serif;
     --color-primary: #FFD449;
     --color-neutral: #909090;
+    --color-neutral-light: #cacaca;
     --color-bg-pause: #e6e4e2;
     --color-black: #000;
     --font-size-large: 4rem;
@@ -56,6 +57,7 @@ h1 {
     font-size: var(--font-size-large);
     margin: 0 0 0 1rem;
 }
+
 h1:focus {
     color: var(--color-black);
     text-shadow: 0 0.5rem 1rem var(--color-black);
@@ -79,4 +81,12 @@ a {
     outline: unset;
     background-color: #d4d4d4;
 
+}
+
+/*  == MENU DE INSTRUCCIONES POR CADA JUEGO == */
+
+#instruccion:focus {
+    outline: unset;
+    background-color: var(--color-neutral-light);
+    border-radius: 1.5rem;
 }
