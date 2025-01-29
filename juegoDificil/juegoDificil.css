@@ -1,0 +1,221 @@
+:root {
+    --font-family: "Architects Daughter", serif;
+    --color-primary: #FFD449;
+    --color-black: #000;
+    --color-neutral: #909090;
+    --color-neutral-light: #cacaca;
+    --color-bg-pause: #e6e4e2;
+    --font-general-size: 3rem;
+    --font-size-large: 4rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* height: 100hv; */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    border: none;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: var(--font-family);
+    /* height: 100hv; */
+    font-size: 1.6rem;
+    line-height: 2;
+    background-image: url('../general/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* display: block; */
+    text-align: center;
+}
+
+header,
+footer {
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+#siguiente {
+    background-color: unset;
+     height: 3rem;
+    width: 3rem;
+color: var(--color-neutral);
+font-size: var(--font-general-size);
+}
+
+*/ time,
+#pista,
+#siguiente {
+    background-color: unset;
+    font-size: var(--font-general-size);
+    align-self: center;
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    margin: 0;
+    line-height: 1.76;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2:focus {
+    color: var(--color-black);
+    text-shadow: 0 0 10px var(--color-black);
+    outline: none;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.palabras {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+#porciones {
+    margin: 0 7rem 0 12rem;
+}
+
+.nombres-comida {
+    font-size: var(--font-general-size);
+}
+
+.recuadros {
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+    /* margin-top: 2.5rem; */
+    margin: 2.5rem 2rem 0 0;
+}
+
+.recuadro {
+    width: 37rem;
+    height: 5rem;
+    background-color: var(--color-neutral-light);
+    border-radius: 1.5rem;
+}
+
+#comida-input {
+    margin: 2.5rem 4rem 0 0;
+}
+
+
+#piramide {
+    position: relative;
+    width: 65rem;
+    height: 54rem;
+    background: url('img/piramideVacia.png') no-repeat center center;
+    background-size: cover;
+}
+
+.nivel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+#nivel-1 {
+    top: -3%;
+    left: 40%;
+    width: 22%;
+}
+
+#nivel-2 {
+    top: 19%;
+    left: 34%;
+    width: 35%;
+}
+
+#nivel-3 {
+    top: 38.5%;
+    left: 26%;
+    width: 48%;
+}
+
+#nivel-4 {
+    top: 60%;
+    left: 12%;
+    width: 75%;
+}
+
+#nivel-5 {
+    top: 80%;
+    left: 8%;
+    width: 90%;
+}
+
+.nivel img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 5px;
+}
+
+.btn-animacion {
+    transition: transform 0.3s ease;
+}
+
+.btn-animacion:hover,
+.btn-animacion:focus {
+    transform: scale(1.03);
+}
+
+p {
+    height: 4rem;
+    font-size: var(--font-general-size);
+    margin: 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+p:focus {
+    color: var(--color-black);
+    text-shadow: 0 0 10px var(--color-black);
+    outline: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+}
+
+.icono {
+    background-color: unset;
+    height: 3rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: unset;
+    transition: transform 0.3s ease;
+}
+
+i:before {
+    font-weight: unset;
+}
+
+a.icono:focus i,
+a.icono:hover i {
+    font-weight: unset;
+    transform: scale(1.03);
+}
