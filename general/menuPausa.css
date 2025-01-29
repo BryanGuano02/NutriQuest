@@ -95,6 +95,51 @@ a {
     margin: 0;
 }
 
-#titulo-instruccion{
+#titulo-instruccion {
     height: 7rem;
+}
+
+/* == MENU JUEGO FIN == */
+#estadisticas {
+    font-size: var(--font-size-medium);
+}
+
+.botones-final {
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 2rem; */
+}
+
+.boton {
+    padding: 0.5rem 2.5rem;
+}
+
+#silenciar {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border: none;
+    border-radius: 50%;
+    padding: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+.btn-animacion{
+    transition: transform 0.3s ease;
+}
+
+.btn-animacion:hover {
+    transform: scale(1.03);
+}
+
+#silenciar:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+.resaltar:focus{
+    color: var(--color-black);
+    text-shadow: 0 0.5rem 1rem var(--color-black);
+    outline: none;
 }
