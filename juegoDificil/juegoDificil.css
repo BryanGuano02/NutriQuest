@@ -1,10 +1,12 @@
 :root {
     --font-family: "Architects Daughter", serif;
     --color-primary: #FFD449;
-    --color-neutro: #767676;
     --color-black: #000;
+    --color-neutral: #909090;
+    --color-neutral-light: #cacaca;
+    --color-bg-pause: #e6e4e2;
     --font-general-size: 3rem;
-    --font-size-small: 2rem;
+    --font-size-large: 4rem;
 }
 
 html {
@@ -41,12 +43,12 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-
+/*
 #siguiente {
     background-color: unset;
-    color: var(--color-neutro);
+    color: var(--color-neutral);
     font-size: var(--font-general-size);
-}
+} */
 
 time,
 #pista {
@@ -56,7 +58,7 @@ time,
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: var(--font-size-large);
     margin: 0;
     line-height: 1.76;
     transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -74,8 +76,28 @@ main {
     justify-content: center;
 }
 
+.palabras {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.recuadros {
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+    margin-top: 2.5rem;
+}
+
+.recuadro {
+    width: 39rem;
+    height: 5rem;
+    background-color: var(--color-neutral-light);
+    border-radius: 1.5rem;
+}
+
 .nombres-comida {
-    width: 24%;
+    font-size: var(--font-general-size);
 }
 
 #piramide {
@@ -128,11 +150,6 @@ main {
     max-width: 100%;
     height: auto;
     margin: 0 5px;
-}
-
-
-#comida-input {
-    width: 25%;
 }
 
 .btn-animacion {
