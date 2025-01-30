@@ -1,11 +1,11 @@
 const images = [
-    { src: 'img/brocoli.jpg', name: 'Brocoli', healthy: true, info: 'El brócoli es saludable porque aporta vitaminas, minerales, fibra y pocas calorías. Además, ayuda a la digestión y mejora tu bienestar.' },
-    { src: 'img/hamburguesa.jpg', name: 'Hamburguesa', healthy: false, info: 'La hamburguesa puede ser rica en grasas saturadas y calorías. Consumirla en exceso no es saludable.' },
-    { src: 'img/cereal-azucarado.jpg', name: 'Cereal Azucarado', healthy: false, info: 'El cereal azucarado suele contener altas cantidades de azúcar y pocos nutrientes. No es la mejor opción para el desayuno diario.' },
+    { src: 'img/brocoli.jpg', name: 'Ensalada de brocoli', healthy: true, info: 'El brócoli es saludable porque aporta vitaminas, minerales, fibra y pocas calorías. Además, ayuda a la digestión y mejora tu bienestar.' },
+    { src: 'img/hamburguesa.jpg', name: 'Hamburguesa de carne de res', healthy: false, info: 'La hamburguesa puede ser rica en grasas saturadas y calorías. Consumirla en exceso no es saludable.' },
+    { src: 'img/cereal-azucarado.jpg', name: 'Tazón de cereal azucarado con leche', healthy: false, info: 'El cereal azucarado suele contener altas cantidades de azúcar y pocos nutrientes. No es la mejor opción para el desayuno diario.' },
     { src: 'img/espinaca.jpg', name: 'Espinaca', healthy: true, info: 'La espinaca es una excelente fuente de hierro, vitaminas y antioxidantes, lo que la hace muy saludable.' },
-    { src: 'img/galletas.jpg', name: 'Galletas', healthy: false, info: 'Las galletas suelen tener alto contenido de azúcar y grasas, por lo que conviene consumirlas con moderación.' },
-    { src: 'img/huevo-cocido.jpg', name: 'Huevo Cocido', healthy: true, info: 'El huevo cocido es rico en proteínas y nutrientes esenciales, una buena adición para una dieta equilibrada.' },
-    { src: 'img/manzana.jpg', name: 'Manzana', healthy: true, info: 'La manzana es rica en fibra y vitamina C, además de ser una excelente opción de snack saludable.' }
+    { src: 'img/galletas.jpg', name: 'Galletas de dulce con pasas', healthy: false, info: 'Las galletas suelen tener alto contenido de azúcar y grasas, por lo que conviene consumirlas con moderación.' },
+    { src: 'img/huevo-cocido.jpg', name: 'Huevos cocidos', healthy: true, info: 'El huevo cocido es rico en proteínas y nutrientes esenciales, una buena adición para una dieta equilibrada.' },
+    { src: 'img/manzana.jpg', name: 'Manzanas', healthy: true, info: 'La manzana es rica en fibra y vitamina C, además de ser una excelente opción de snack saludable.' }
 ];
 
 let currentIndex = 0;
@@ -51,6 +51,18 @@ function updateScore() {
     document.getElementById('score').textContent = score;
 }
 
+// function showNextImage() {
+//     const feedback = document.getElementById('feedback');
+//     const infoBox = document.getElementById('info-box');
+
+//     feedback.classList.add('hidden');
+//     infoBox.classList.add('hidden');
+
+//     currentIndex = (currentIndex + 1) % images.length;
+//     const nextImage = images[currentIndex];
+//     document.getElementById('food-image').src = nextImage.src;
+//     document.getElementById('food-name').textContent = nextImage.name;
+// }
 function showNextImage() {
     const feedback = document.getElementById('feedback');
     const infoBox = document.getElementById('info-box');
@@ -60,7 +72,9 @@ function showNextImage() {
 
     currentIndex = (currentIndex + 1) % images.length;
     const nextImage = images[currentIndex];
-    document.getElementById('food-image').src = nextImage.src;
+    const foodImageElement = document.getElementById('food-image');
+    foodImageElement.src = nextImage.src;
+    foodImageElement.alt = nextImage.name;
     document.getElementById('food-name').textContent = nextImage.name;
 }
 

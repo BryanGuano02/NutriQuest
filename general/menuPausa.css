@@ -87,7 +87,7 @@ a {
 
 #instruccion:focus {
     outline: unset;
-    background-color: var(--color-neutral-light);
+    text-shadow: 0 0.5rem 1rem var(--color-black);
     border-radius: 1.5rem;
 }
 
@@ -130,7 +130,8 @@ a {
     transition: transform 0.3s ease;
 }
 
-.btn-animacion:hover, .btn-animacion:focus {
+.btn-animacion:hover,
+.btn-animacion:focus {
     transform: scale(1.03);
 }
 

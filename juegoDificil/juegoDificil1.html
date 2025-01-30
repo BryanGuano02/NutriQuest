@@ -14,23 +14,24 @@
 <body>
 
     <header>
-        <time id="timer">00:00</time>
+        <time id="timer" tabindex="0">00:00</time>
         <!-- <button id="siguiente">
             <a href="https://www.ejemplo.com" style="text-decoration: none; color: inherit;">Ir a Ejemplo</a>
         </button> -->
     </header>
 
-    <h2>Pirámide Alimenticia</h2>
+    <h2 tabindex="0">Pirámide Alimenticia</h2>
 
 
     <main>
         <div class="palabras">
-            <div class="nombres-comida palabra" draggable="true" id="palabra1">Alimentos con carbohidratos</div>
-            <div class="nombres-comida palabra" draggable="true" id="palabra2">Frutas y vegetales</div>
-            <div class="nombres-comida palabra" draggable="true" id="palabra3">Alimentos grasos</div>
-            <div class="nombres-comida palabra" draggable="true" id="palabra4">Alimentos proteicos</div>
-            <div class="nombres-comida palabra" draggable="true" id="palabra5">Lacteos</div>
-            <div class="nombres-comida palabra" draggable="true" id="palabra6">Alimentos reguladores</div>
+            <div class="nombres-comida" draggable="true" id="palabra1" tabindex="0">Alimentos con carbohidratos
+            </div>
+            <div class="nombres-comida" draggable="true" id="palabra2" tabindex="0">Frutas y vegetales</div>
+            <div class="nombres-comida" draggable="true" id="palabra3" tabindex="0">Alimentos grasos</div>
+            <div class="nombres-comida" draggable="true" id="palabra4" tabindex="0">Alimentos proteicos</div>
+            <div class="nombres-comida" draggable="true" id="palabra5" tabindex="0">Lacteos</div>
+            <div class="nombres-comida" draggable="true" id="palabra6" tabindex="0">Alimentos reguladores</div>
         </div>
         <div id="piramide">
             <div class="nivel" id="nivel-1">
@@ -50,17 +51,14 @@
             </div>
         </div>
         <div class="recuadros" id="comida-input">
-            <div class="recuadro" id="recuadro1" data-palabra="Alimentos grasos"></div>
-            <div class="recuadro" id="recuadro2" data-palabra="Alimentos proteicos"></div>
-            <div class="recuadro" id="recuadro3" data-palabra="Lacteos"></div>
-            <div class="recuadro" id="recuadro4" data-palabra="Frutas y vegetales"></div>
-            <div class="recuadro" id="recuadro5" data-palabra="Lacteos"></div>
+            <div tabindex="0" class="recuadro btn-animacion" id="recuadro1" data-palabra="Alimentos grasos"></div>
+            <div tabindex="0" class="recuadro btn-animacion" id="recuadro2" data-palabra="Alimentos proteicos"></div>
+            <div tabindex="0" class="recuadro btn-animacion" id="recuadro3" data-palabra="Lacteos"></div>
+            <div tabindex="0" class="recuadro btn-animacion" id="recuadro4" data-palabra="Frutas y vegetales"></div>
+            <div tabindex="0" class="recuadro btn-animacion" id="recuadro5" data-palabra="Lacteos"></div>
         </div>
 
     </main>
-
-
-
 
     <p tabindex="0">Puntuación: <span id="score">0</span></p>
     <footer>

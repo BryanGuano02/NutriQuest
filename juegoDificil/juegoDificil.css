@@ -44,34 +44,29 @@ footer {
     justify-content: space-between;
 }
 
-/*
-#siguiente {
-    background-color: unset;
-     height: 3rem;
-    width: 3rem;
-color: var(--color-neutral);
-font-size: var(--font-general-size);
-}
-
-*/ time,
-#pista,
-#siguiente {
+time,
+.boton {
     background-color: unset;
     font-size: var(--font-general-size);
     align-self: center;
 }
 
-h2 {
-    font-size: var(--font-size-large);
-    margin: 0;
-    line-height: 1.76;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-h2:focus {
+time:focus,
+time:hover,
+.boton:focus,
+.boton:hover,
+h2:focus,
+h2:hover {
     color: var(--color-black);
     text-shadow: 0 0 10px var(--color-black);
     outline: none;
+}
+
+h2 {
+font-size: var(--font-size-large);
+    margin: 0;
+    line-height: 1.76;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 main {
@@ -95,6 +90,13 @@ main {
     font-size: var(--font-general-size);
 }
 
+.nombres-comida:focus,
+.nombres-comida:hover {
+    color: var(--color-black);
+    text-shadow: 0 0 10px var(--color-black);
+    outline: none;
+}
+
 .recuadros {
     display: flex;
     flex-direction: column;
@@ -108,6 +110,12 @@ main {
     height: 5rem;
     background-color: var(--color-neutral-light);
     border-radius: 1.5rem;
+}
+
+.recuadro:focus,
+.recuadro:hover {
+    background-color: var(--color-neutral);
+    outline: none;
 }
 
 #comida-input {

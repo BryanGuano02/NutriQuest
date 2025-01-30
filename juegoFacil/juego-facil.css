@@ -68,7 +68,7 @@ time,
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-#food-name:focus {
+#food-name:focus, #food-name:hover {
     color: var(--color-black);
     text-shadow: 0 0 10px var(--color-black);
     outline: none;
@@ -83,6 +83,10 @@ time,
     width: 30%;
     height: 22rem;
     border-radius: 1.5rem;
+}
+
+#food-image:focus {
+    outline: none;
 }
 
 #feedback {

@@ -1,6 +1,7 @@
 :root {
     --color-primary: #FFD449;
     --color-highlight: #ffecb9;
+    --color-highlight-title: #FF8C00;
     --font-size-mlarge: 8rem;
     --font-size-medium: 2.5rem;
     --font-size-small: 2rem;
@@ -43,19 +44,31 @@ table {
     border-radius: 1.5rem;
 }
 
-table th {
+th {
     background-color: var(--color-primary);
     padding: 10px;
     border-bottom: 0.1rem solid #ddd;
 }
 
-table td {
-    padding: 1.2rem 1rem;
-    border-bottom: 0.1rem solid #ddd;
+th:hover,
+th:focus {
+    background-color: var(--color-highlight-title);
+    outline: unset;
 }
 
 tr:hover {
     background-color: var(--color-highlight);
+}
+
+td {
+    padding: 1.2rem 1rem;
+    border-bottom: 0.1rem solid #ddd;
+}
+
+td:focus,
+td:hover {
+    background-color: var(--color-highlight);
+    outline: unset;
 }
 
 /* == MENU COMO JUGAR == */
@@ -78,6 +91,16 @@ h3 {
     letter-spacing: 0.15rem;
 }
 
+h3:focus,
+h3:hover,
+p:focus,
+p:hover,
+li:focus,
+li:hover {
+    outline: unset;
+    text-shadow: 0 0.5rem 1rem var(--color-black);
+}
+
 p {
     margin: 0;
 }
@@ -91,6 +114,7 @@ ol {
     transition: transform 0.3s ease;
 }
 
-.btn-animacion:hover, .btn-animacion:focus {
+.btn-animacion:hover,
+.btn-animacion:focus {
     transform: scale(1.03);
 }
