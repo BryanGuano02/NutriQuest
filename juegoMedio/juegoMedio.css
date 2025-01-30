@@ -54,6 +54,12 @@ time,
     align-self: center;
 }
 
+time:focus, time:hover, .card:focus, .card:hover {
+    color: var(--color-black);
+    text-shadow: 0 0 10px var(--color-black);
+    outline: unset;
+}
+
 h2 {
     font-size: 5rem;
     margin: 0;
