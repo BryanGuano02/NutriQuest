@@ -44,13 +44,7 @@ table {
     border-radius: 1.5rem;
 }
 
-caption {
-    font-weight: bold;
-    font-size: 1.2em;
-    background-color: var(--color-primary);
-    padding: 0.5rem;
-    text-align: center;
-}
+
 
 th {
     background-color: var(--color-primary);
@@ -79,6 +73,14 @@ td:focus,
 td:hover {
     background-color: var(--color-highlight);
     outline: unset;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: var(--color-primary);
+    padding: 0.5rem;
+    text-align: center;
 }
 
 /* == MENU COMO JUGAR == */
