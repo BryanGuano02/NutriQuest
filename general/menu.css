@@ -44,6 +44,14 @@ table {
     border-radius: 1.5rem;
 }
 
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: var(--color-primary);
+    padding: 0.5rem;
+    text-align: center;
+}
+
 th {
     background-color: var(--color-primary);
     padding: 10px;
@@ -51,7 +59,9 @@ th {
 }
 
 th:hover,
-th:focus {
+th:focus,
+caption:focus,
+caption:hover {
     background-color: var(--color-highlight-title);
     outline: unset;
 }
