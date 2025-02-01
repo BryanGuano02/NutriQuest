@@ -1,4 +1,4 @@
-:root {
+            :root {
     --color-primary: #FFD449;
     --color-neutro: #767676;
     --color-black: #000;
@@ -81,7 +81,6 @@ h2:focus {
     justify-content: center;
     margin: 2rem 0;
 }
-
 .card {
     width: 13rem;
     height: 20rem;
@@ -95,7 +94,10 @@ h2:focus {
     cursor: pointer;
     box-shadow: .5rem .5rem .45rem rgba(0, 0, 0, 0.4);
     border: 0.1rem solid #000;
+    position: relative;
+    text-align: center;
 }
+
 
 .btn-animacion {
     transition: transform 0.3s ease;
@@ -147,4 +149,20 @@ a.icono:focus i,
 a.icono:hover i {
     font-weight: unset;
     transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: none;  /* Ocultar imagen inicialmente */
+}
+
+.card.revealed img {
+    display: block;  /* Mostrar imagen cuando la tarjeta se revele */
+}
+
+.card.revealed {
+    font-size: 0; /* Oculta el "?" cuando se revele la tarjeta */
 }

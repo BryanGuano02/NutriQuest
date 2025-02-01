@@ -21,7 +21,7 @@
         <h1 tabindex="2">ELEGIR DIFICULTAD</h1>
         <div class="botones">
             <a tabindex="2" class="boton btn-animacion" role="button" href="../../juegoFacil/juego_facil.html">FÁCIL</a>
-            <a tabindex="3" class="boton btn-animacion" href="../../juegoMedio/juegoMedio.html" role="button">MEDIO</a>
+            <a tabindex="3" class="boton btn-animacion" onclick="localStorage.removeItem('gameState'); localStorage.removeItem('score'); localStorage.removeItem('timeElapsed') " href="../../juegoMedio/juegoMedio.html" role="button">MEDIO</a>
             <a tabindex="4" class="boton btn-animacion" href="../../juegoDificil/juegoDificil1.html" role="button">DIFÍCIL</a>
         </div>
     </main>
