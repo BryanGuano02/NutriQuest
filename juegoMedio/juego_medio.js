@@ -128,6 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
         startTimer();
         if (lockBoard || card.classList.contains('revealed')) return;
 
+        const originalText = card.innerHTML;
+
         card.classList.add('revealed');
         const img = card.querySelector('img');
         img.style.display = 'block';
@@ -144,12 +146,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!firstCard) {
             firstCard = card;
+            firstCard.originalText = originalText; // Guardamos el texto original en la primera carta
             return;
         }
-
         secondCard = card;
+        secondCard.originalText = originalText; // Guardamos el texto original en la segunda carta
         lockBoard = true;
-
+    
         const firstImage = firstCard.querySelector('img').src;
         const secondImage = secondCard.querySelector('img').src;
 
@@ -173,14 +176,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 const firstImg = firstCard.querySelector('img');
                 firstCard.classList.remove('revealed');
                 firstImg.style.display = 'none';
-                firstCard.innerHTML = "?";
+                firstCard.innerHTML = firstCard.originalText;
                 firstCard.appendChild(firstImg);
                 firstCard.removeAttribute('aria-label');
 
                 const secondImg = secondCard.querySelector('img');
                 secondCard.classList.remove('revealed');
                 secondImg.style.display = 'none';
-                secondCard.innerHTML = "?";
+                secondCard.innerHTML = secondCard.originalText;
                 secondCard.appendChild(secondImg);
                 secondCard.removeAttribute('aria-label');
 
