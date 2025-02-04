@@ -1,3 +1,6 @@
+const correctSound = new Audio('sounds/correct.mp3');
+const incorrectSound = new Audio('sounds/incorrect.mp3');
+
 const images = [
     { src: 'img/brocoli.jpg', name: 'Ensalada de brocoli', healthy: true, info: 'El brócoli es saludable porque aporta vitaminas, minerales, fibra y pocas calorías. Además, ayuda a la digestión y mejora tu bienestar.' },
     { src: 'img/hamburguesa.jpg', name: 'Hamburguesa de carne de res', healthy: false, info: 'La hamburguesa puede ser rica en grasas saturadas y calorías. Consumirla en exceso no es saludable.' },
@@ -9,9 +12,10 @@ const images = [
 ];
 
 let currentIndex = 0;
-let score = 0;
+let score = localStorage.getItem('score') ? parseInt(localStorage.getItem('score')) : 0;
+let secondsElapsed = localStorage.getItem('time') ? parseInt(localStorage.getItem('time')) : 0;
 let timerInterval;
-let secondsElapsed = 0;
+const redirectUrl = "../general/html/menuJuegoFin.html"; // Reemplaza con la URL deseada
 
 document.getElementById('healthy').addEventListener('click', () => makeChoice(true));
 document.getElementById('unhealthy').addEventListener('click', () => makeChoice(false));
@@ -25,56 +29,83 @@ function makeChoice(isHealthyChoice) {
     const feedback = document.getElementById('feedback');
     const infoBox = document.getElementById('info-box');
     const infoText = document.getElementById('info-text');
+    const healthyButton = document.getElementById('healthy');
+    const unhealthyButton = document.getElementById('unhealthy');
 
     if (currentImage.healthy === isHealthyChoice) {
         score++;
         feedback.textContent = '✔';
         feedback.className = 'correct';
         feedback.classList.remove('hidden');
-        setTimeout(showNextImage, 2000);
+        correctSound.play();
+
+        // Cambiar el fondo a verde
+        if (isHealthyChoice) {
+            healthyButton.style.backgroundColor = 'green';
+            unhealthyButton.style.backgroundColor = '';
+        } else {
+            unhealthyButton.style.backgroundColor = 'green';
+            healthyButton.style.backgroundColor = '';
+        }
+
+        setTimeout(() => {
+            showNextImage();
+            healthyButton.style.backgroundColor = ''; // Resetear el fondo
+            unhealthyButton.style.backgroundColor = ''; // Resetear el fondo
+        }, 2000);
     } else {
         stopTimer();
         feedback.textContent = '✖';
         feedback.className = 'incorrect';
         feedback.classList.remove('hidden');
+        incorrectSound.play();
+
+        // Cambiar el fondo a rojo
+        if (isHealthyChoice) {
+            healthyButton.style.backgroundColor = 'red';
+            unhealthyButton.style.backgroundColor = '';
+        } else {
+            unhealthyButton.style.backgroundColor = 'red';
+            healthyButton.style.backgroundColor = '';
+        }
+
         setTimeout(() => {
             feedback.classList.add('hidden');
             infoText.textContent = currentImage.info;
             infoBox.classList.remove('hidden');
+            healthyButton.style.backgroundColor = ''; // Resetear el fondo
+            unhealthyButton.style.backgroundColor = ''; // Resetear el fondo
         }, 2000);
     }
-
     updateScore();
 }
 
 function updateScore() {
     document.getElementById('score').textContent = score;
+    // Guardar el puntaje en el almacenamiento local
+    localStorage.setItem('score', score);
 }
 
-// function showNextImage() {
-//     const feedback = document.getElementById('feedback');
-//     const infoBox = document.getElementById('info-box');
-
-//     feedback.classList.add('hidden');
-//     infoBox.classList.add('hidden');
-
-//     currentIndex = (currentIndex + 1) % images.length;
-//     const nextImage = images[currentIndex];
-//     document.getElementById('food-image').src = nextImage.src;
-//     document.getElementById('food-name').textContent = nextImage.name;
-// }
 function showNextImage() {
     const feedback = document.getElementById('feedback');
     const infoBox = document.getElementById('info-box');
-
     feedback.classList.add('hidden');
     infoBox.classList.add('hidden');
 
-    currentIndex = (currentIndex + 1) % images.length;
+    if (currentIndex + 1 >= images.length) {
+        // Guardar el puntaje y el tiempo antes de redirigir
+        localStorage.setItem('score', score);
+        localStorage.setItem('time', secondsElapsed);
+
+        // Redirigir a la página de nivel completado
+        window.location.href = redirectUrl;
+        return;
+    }
+
+    currentIndex++;
     const nextImage = images[currentIndex];
-    const foodImageElement = document.getElementById('food-image');
-    foodImageElement.src = nextImage.src;
-    foodImageElement.alt = nextImage.name;
+    document.getElementById('food-image').src = nextImage.src;
+    document.getElementById('food-image').alt = nextImage.name;
     document.getElementById('food-name').textContent = nextImage.name;
 }
 
@@ -85,6 +116,8 @@ function startTimer() {
             const minutes = Math.floor(secondsElapsed / 60);
             const seconds = secondsElapsed % 60;
             document.getElementById('timer').textContent = `${pad(minutes)}:${pad(seconds)}`;
+            // Guardar el tiempo en el almacenamiento local
+            localStorage.setItem('time', secondsElapsed);
         }, 1000);
     }
 }
@@ -98,7 +131,10 @@ function pad(number) {
     return number < 10 ? '0' + number : number;
 }
 
-// Initialize timer on page load
 window.onload = () => {
-    startTimer();
+    // Recuperar el puntaje y el tiempo guardados
+    updateScore();
+    if (secondsElapsed > 0) {
+        startTimer();
+    }
 };
