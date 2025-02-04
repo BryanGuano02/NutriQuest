@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scoreElement = document.getElementById("score");
     const timerElement = document.getElementById("timer");
     const pauseButton = document.getElementById("pauseButton");
+    const redirectUrl = "../general/html/menuJuegoFin.html"; // Reemplaza con la URL deseada
 
     let score = 0;
     let firstCard = null;
@@ -124,6 +125,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    function checkWinCondition() {
+        if (gameState.revealedIndexes.length === cards.length) {
+            announceMessage("¡Ganaste!");
+            clearInterval(timerInterval);
+
+            localStorage.setItem('score', score);
+            localStorage.setItem('time', secondsElapsed);
+
+            // Redirigir a la página de nivel completado
+            window.location.href = redirectUrl;// Detener el cronómetro al ganar
+        }
+    }
+
     function handleCardSelection(card) {
         startTimer();
         if (lockBoard || card.classList.contains('revealed')) return;
@@ -152,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
         secondCard = card;
         secondCard.originalText = originalText; // Guardamos el texto original en la segunda carta
         lockBoard = true;
-    
+
         const firstImage = firstCard.querySelector('img').src;
         const secondImage = secondCard.querySelector('img').src;
 
@@ -164,7 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
             firstCard.removeEventListener('click', handleCardSelection);
             secondCard.removeEventListener('click', handleCardSelection);
             resetBoard();
-        } else {
+            checkWinCondition(); // Verificar si ha ganado después de un acierto
+        }
+        else {
             setTimeout(() => {
                 announceMessage("Fallaste");
 
