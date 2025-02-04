@@ -1,63 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../general/normalize.css">
-    <link rel="stylesheet" href="juego-facil.css">
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1062a20a38.js" crossorigin="anonymous"></script>
-    <title>Juego Nivel Fácil</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../general/normalize.css">
+        <link rel="stylesheet" href="juego-facil.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1062a20a38.js"
+            crossorigin="anonymous"></script>
+        <title>Juego Nivel Fácil</title>
+    </head>
 
-<body>
-    <header>
-        <time id="timer">00:00</time>
-        <!-- <button id="siguiente">
+    <body>
+        <header>
+            <time id="timer">00:00</time>
+            <!-- <button id="siguiente">
             <a href="https://www.ejemplo.com" style="text-decoration: none; color: inherit;">Ir a Ejemplo</a>
         </button> -->
 
-    </header>
-    <div class="content">
-        <div class="content-top">
-            <h2 tabindex="0" id="food-name">Ensalada</h2>
-            <div class="image-container" id="feedback-container">
-                <img tabindex="0" class="btn-animacion" id="food-image" src="img/brocoli.jpg" alt="Brocoli">
-                <div id="feedback" class="hidden"></div>
+        </header>
+        <div class="content">
+            <div class="content-top">
+                <h2 tabindex="0" id="food-name">Ensalada</h2>
+                <div class="image-container" id="feedback-container">
+                    <img tabindex="0" class="btn-animacion" id="food-image"
+                        src="img/brocoli.jpg" alt="Brocoli">
+                    <div id="feedback" class="hidden"></div>
+                </div>
+            </div>
+            <div id="eleccion">
+                <button id="healthy" class="btn-eleccion btn-animacion"
+                    tabindex="0">Saludable</button>
+                <button id="unhealthy" class="btn-eleccion btn-animacion">No
+                    saludable</button>
+            </div>
+            <p tabindex="0">Puntuación: <span id="score">0</span></p>
+        </div>
+
+        <!-- Recuadro informativo -->
+        <div id="info-box" class="hidden">
+            <!-- <div id="info-box"> -->
+            <div class="info-content">
+                <h3>Recordemos...</h3>
+                <p id="info-text"></p>
+                <button id="next-item">Siguiente</button>
             </div>
         </div>
-        <div id="eleccion">
-            <button id="healthy" class="btn-eleccion btn-animacion" tabindex="0">Saludable</button>
-            <button id="unhealthy" class="btn-eleccion btn-animacion">No saludable</button>
-        </div>
-        <p tabindex="0">Puntuación: <span id="score">0</span></p>
-    </div>
 
-    <!-- Recuadro informativo -->
-    <div id="info-box" class="hidden">
-        <!-- <div id="info-box"> -->
-        <div class="info-content">
-            <h3>Recordemos...</h3>
-            <p id="info-text"></p>
-            <button id="next-item">Siguiente</button>
-        </div>
-    </div>
-
-    <footer>
-        <a class="icono btn-animacion" role="button" aria-label="Instrucciones del juego"
-            href="../general/html/menuInstrucciones.html">
-            <i class="fa-solid fa-circle-question fa-2x" aria-hidden="true"></i>
-        </a>
-
-        <div>
-            <a class="icono btn-animacion" role="button" aria-label="Pausar juego"
-                href="../general/html/menuPausa.html">
-                <i class="fa-solid fa-circle-pause fa-2x" aria-hidden="true"></i>
+        <footer>
+            <a class="icono btn-animacion" role="button"
+                aria-label="Instrucciones del juego"
+                href="../general/html/menuInstrucciones.html">
+                <i class="fa-solid fa-circle-question fa-2x"
+                    aria-hidden="true"></i>
             </a>
-        </div>
-    </footer>
-    <script src="juego_facil.js"></script>
-</body>
+
+            <div>
+                <a class="icono btn-animacion" role="button"
+                    aria-label="Pausar juego"
+                    href="../general/html/menuPausa.html">
+                    <i class="fa-solid fa-circle-pause fa-2x"
+                        aria-hidden="true"></i>
+                </a>
+            </div>
+        </footer>
+        <script src="juego_facil.js"></script>
+    </body>
 
 </html>
